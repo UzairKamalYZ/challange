@@ -8,6 +8,7 @@ public class CalculateIngots {
 
 
     public static void main(String[] args) {
+        long start = System.nanoTime();
 
         ArrayList<String> strings = new ArrayList<>();
         String fileName = "C:\\workspaces\\ChallangeProject\\src\\main\\resources\\input";
@@ -27,8 +28,9 @@ public class CalculateIngots {
             strings.forEach(s -> System.out.println(new CalculateIngots().getEurosForIngots(Integer.parseInt(s))));
         }
 
-        long end = System.currentTimeMillis();
-        System.out.println("Processing Took " + (end - start) + "ms");
+        long end = System.nanoTime();
+
+        System.out.println("Processing Took " + (end - start) + "ns");
     }
 
     public long getEurosForIngots(int input_ingot) {
